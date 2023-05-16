@@ -6,10 +6,11 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <string.h>
-#define MAX_ARGS 10
+#define CMD_LEN 70
+#define PROMPT "$ "
 
-void show_prompt(void);
-char** get_input();
-void exec_command(char **args);
+void exit_line(char *str);
+ssize_t gets_cmd(char *cmd, size_t len);
+void exec_cmd(char *cmd, char *fn);
 
 #endif
