@@ -21,6 +21,7 @@ int main(int argc __attribute__ ((unused)), char *argv[])
 		}
 		exit_line(cmd);
 		exec_cmd(cmd, argv[0]);
+		exec_token(cmd, "tk");
 	}
 	return (0);
 }
