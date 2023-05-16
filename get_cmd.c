@@ -11,7 +11,7 @@ ssize_t gets_cmd(char *cmd, size_t len)
 {
 	ssize_t bytes;
 
-	write(STDOUT_FILENO, PROMPT, strlen(PROMPT));
+	write(STDOUT_FILENO, PROMPT, _strlen(PROMPT));
 	bytes = read(STDIN_FILENO, cmd, len);
 
 	if (bytes < 0)
