@@ -10,7 +10,7 @@ void exec_cmd(char *cmd, char *fn)
 	pid_t pid;
 	int st;
 
-	if (strcmp(cmd, "/bin/ls") != 0)
+	if (_strcmp(cmd, "/bin/ls") != 0)
 	{
 		fprintf(stderr, "%s: No such file or directory\n", fn);
 		return;

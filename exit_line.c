@@ -6,5 +6,5 @@
  */
 void exit_line(char *str)
 {
-	str[strcspn(str, "\n")] = '\0';
+	str[_strcspn(str, "\n")] = '\0';
 }
