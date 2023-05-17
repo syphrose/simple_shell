@@ -14,18 +14,17 @@ void exec_token(char *cmd, char *fn)
 	char *tk;
 	pid_t pid;
 	int st;
-
-	tk = (char *)strtok(cmd, " ");
-	while (tk != NULL && num < ARGS)
+	
+	args[num++] = strtok(cmd, " ");
+	while (num < ARGS && (args[num] = strtok(NULL, " ")) != NULL)
 	{
-		args[num++] = tk;
-		tk = (char *)strtok(NULL, " ");
+		num++;
 	}
-	args[num] = NULL;
 	if (num == 0)
 	{
 		return;
 	}
+	args[num] = NULL;
 	pid = fork();
 	if (pid < 0)
 	{
