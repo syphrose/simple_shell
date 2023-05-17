@@ -9,12 +9,15 @@ void exec_cmd(char *cmd, char *fn)
 {
 	pid_t pid;
 	int st;
+	char *args[4];
 
 	if (_strcmp(cmd, "/bin/ls") != 0)
 	{
 		fprintf(stderr, "%s: No such file or directory\n", fn);
 		return;
 	}
+	char *args[4] = {"ls", "-l", "/tmp", NULL};
+
 	pid = fork();
 	if (pid < 0)
 	{
@@ -23,13 +26,13 @@ void exec_cmd(char *cmd, char *fn)
 	}
 	else if (pid == 0)
 	{
-		execl("/bin/ls", "ls", NULL);
+		execv("/bin/ls", args);
 		perror("Command execution failed");
 		exit(EXIT_FAILURE);
 	}
 	else
 	{
-		waitpid(pid, &st, 0);
+		waitpid(pid, &st, 0)
 	}
 
 }
