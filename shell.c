@@ -28,6 +28,7 @@ int main(int argc __attribute__ ((unused)), char *argv[])
 			fprintf(stderr, "%s: Command not found\n", cmd);
 			continue;
 		}
+		exec_cmd("ls -l /tmp", "ls -l /tmp");
 		exec_token(cmdTrack, "tk");
 		free(cmdTrack);
 	}
