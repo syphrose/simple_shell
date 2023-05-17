@@ -11,13 +11,21 @@ void exec_cmd(char *cmd, char *fn)
 	int st;
 	char msg;
 
-	if (_strcmp(cmd, "/bin/ls") != 0)
+	if (_strcmp(cmd, "ls") != 0)
 	{
 		msg[CMD_LEN + 32];
 		sprintf(msg, "%s: No such file or directory\n", fn);
 		writeerrMsg(msg);
 		return;
 	}
+<<<<<<< HEAD
+=======
+	char *args[4] = {"ls", "-l", "/tmp", NULL};
+<<<<<<< HEAD
+=======
+
+>>>>>>> 397f290e8d789c01aa0b6d3f36485b091a58e568
+>>>>>>> c804fa121ffd623aba6c27aeffc9cd2be4eb1ae0
 	pid = fork();
 	if (pid < 0)
 	{
