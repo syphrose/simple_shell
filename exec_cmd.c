@@ -9,6 +9,7 @@ void exec_cmd(char *cmd, char *fn)
 {
 	pid_t pid;
 	int st;
+	char *args[4];
 
 	if (_strcmp(cmd, "ls") != 0)
 	{
@@ -16,6 +17,10 @@ void exec_cmd(char *cmd, char *fn)
 		return;
 	}
 	char *args[4] = {"ls", "-l", "/tmp", NULL};
+<<<<<<< HEAD
+=======
+
+>>>>>>> 397f290e8d789c01aa0b6d3f36485b091a58e568
 	pid = fork();
 	if (pid < 0)
 	{
@@ -30,7 +35,7 @@ void exec_cmd(char *cmd, char *fn)
 	}
 	else
 	{
-		waitpid(pid, &st, 0);
+		waitpid(pid, &st, 0)
 	}
 
 }
