@@ -9,14 +9,13 @@ void exec_cmd(char *cmd, char *fn)
 {
 	pid_t pid;
 	int st;
-	char *args[4];
 
-	if (_strcmp(cmd, "/bin/ls") != 0)
+	if (_strcmp(cmd, "ls") != 0)
 	{
 		fprintf(stderr, "%s: No such file or directory\n", fn);
 		return;
 	}
-	args[4] = {"ls", "-l", "/tmp", NULL};
+	char *args[4] = {"ls", "-l", "/tmp", NULL};
 	pid = fork();
 	if (pid < 0)
 	{
