@@ -23,7 +23,7 @@ int main(int argc __attribute__ ((unused)), char *argv[])
 		exit_line(cmd);
 		cmdTrack = handle_path(cmd);
 
-		if (cmdTrack == NULL)
+		if (cmdTrack== NULL)
 		{
 			fprintf(stderr, "%s: Command not found\n", cmd);
 			continue;
