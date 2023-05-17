@@ -20,5 +20,6 @@ int _strcmp(const char *string1, const char *string2);
 void exec_token(char *cmd, char *fn);
 char *handle_path(char *cmd);
 char *_strncpy(char *dest, const char *src, int sz);
+void errMsg(const char *msg);
 
 #endif

@@ -9,18 +9,16 @@ void exec_cmd(char *cmd, char *fn)
 {
 	pid_t pid;
 	int st;
-	char *args[4];
+	char msg;
 
 	if (_strcmp(cmd, "ls") != 0)
 	{
-		fprintf(stderr, "%s: No such file or directory\n", fn);
+		msg[CMD_LEN + 32];
+		sprintf(msg, "%s: No such file or directory\n", fn);
+		writeerrMsg(msg);
 		return;
 	}
-	char *args[4] = {"ls", "-l", "/tmp", NULL};
-<<<<<<< HEAD
-=======
 
->>>>>>> 397f290e8d789c01aa0b6d3f36485b091a58e568
 	pid = fork();
 	if (pid < 0)
 	{
@@ -29,7 +27,7 @@ void exec_cmd(char *cmd, char *fn)
 	}
 	else if (pid == 0)
 	{
-		execv("/bin/ls", args);
+		execl("/bin/ls", "ls", NULL);
 		perror("Command execution failed");
 		exit(EXIT_FAILURE);
 	}

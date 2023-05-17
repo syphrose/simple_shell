@@ -11,7 +11,6 @@ int main(int argc __attribute__ ((unused)), char *argv[])
 {
 	char cmd[CMD_LEN];
 	ssize_t bytes;
-	char *cmdTrack;
 
 	while (1)
 	{
@@ -21,15 +20,8 @@ int main(int argc __attribute__ ((unused)), char *argv[])
 			break;
 		}
 		exit_line(cmd);
-		cmdTrack = handle_path(cmd);
 
-		if (cmdTrack== NULL)
-		{
-			fprintf(stderr, "%s: Command not found\n", cmd);
-			continue;
-		}
-		exec_token(args[0], "tk");
-		free(cmdTrack);
+		exec_cmd(cmd, argv[0]);
 	}
 	return (0);
 }
