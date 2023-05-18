@@ -24,7 +24,7 @@ char *gets_path(const char *cmd, const char *track)
 		if (access(tmpTrack, X_OK) == 0)
 		{
 			fTrack = _strdup(tmpTrack);
-			break
+			break;
 		}
 		dir = strtok(NULL, ":");
 	}

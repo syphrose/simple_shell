@@ -22,11 +22,11 @@ void cmd_parse(const char *cmdline, char *cmd, char *args[]);
 int cmd_exists(const char *cmd, const char *dir);
 char *search_cmd(const char *cmd, const char *track);
 int _strcmp(const char *string1, const char *string2);
-void _strcpy(char *end, const char *src);
 size_t _strcspn(const char *str1, const char *str2);
-char *_strdup(const char *str);
-size_t _strlen(const char *str);
-void handlers_environ(char *const args[]);
+size_t _strlen(const char *str);
+void _strcpy(char *end, const char *src);
+char *_strdup(const char *str);
+void handles_exit(char *const args[]);
 int cmd_exists(const char *cmd, const char *dir);
 
 #endif
