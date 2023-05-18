@@ -16,7 +16,7 @@ void exec_cmd(const char *cmd, char *const args[]);
 int authorised_cmd(const char *cmd);
 char *gets_path(const char *cmd, const char *track);
 void exit_line(char *str);
-void handles_environ(char *const args[]);
+void handles_environ(char *const args[] __attribute__((unused)));
 ssize_t gets_cmd(char *cmd);
 void cmd_parse(const char *cmdline, char *cmd, char *args[]);
 int cmd_exists(const char *cmd, const char *dir);
