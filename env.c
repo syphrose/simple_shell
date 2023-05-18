@@ -6,7 +6,7 @@
  *
  */
 
-void handles_environ(char *const args[])
+void handles_environ(char *const args[] __attribute__ ((unused)))
 {
 	char **en;
 
