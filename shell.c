@@ -2,17 +2,17 @@
 
 /**
  * main - entry point
- * @argc:argument count
- * @argv:vectors
  *
  * Return:0(succcess)
  */
 
-int main(int argc __attribute__((unused)), char *argv[])
+int main()
 {
 	char cmdline[CMD_LEN];
 	ssize_t bytes;
 	int ind;
+	char *cmd;
+	char *args[CMD_LEN];
 
 	while (1)
 	{
@@ -30,8 +30,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 		}
 		cmdline[_strcspn(cmdline, "\n")] = '\0';
 
-		char *cmd = strtok(cmdline, " ");
-		char *args[CMD_LEN];
+		cmd = strtok(cmdline, " ");
 
 		ind = 0;
 		while (cmd != NULL)
