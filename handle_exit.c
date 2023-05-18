@@ -7,5 +7,8 @@
  */
 void handles_exit(char *const args[])
 {
-	exit(EXIT_SUCCESS);
+	if (args[1] == NULL)
+	{
+		exit(EXIT_SUCCESS);
+	}
 }
