@@ -20,7 +20,7 @@ char *search_cmd(const char *cmd, const char *track)
 		if (cmd_exists(cmd, dir))
 		{
 			fTrack = malloc(_strlen(dir) + _strlen(cmd) + 2);
-			snprintf(fTrack, CMD_LEN, "%s/%s", dir, cmd);
+			print_concat(dir, cmd);
 			return (fTrack);
 		}
 		dir = strtok(NULL, ":");
