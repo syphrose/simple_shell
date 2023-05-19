@@ -12,6 +12,7 @@ void handles_environ(char *const args[] __attribute__ ((unused)))
 
 	for (en = environ; *en != NULL; en++)
 	{
-		printf("%s\n", *en);
+		write(1, *en, strlen(*en));
+		write(1, "\n", 1);
 	}
 }
