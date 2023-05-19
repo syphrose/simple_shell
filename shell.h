@@ -28,5 +28,6 @@ void _strcpy(char *end, const char *src);
 char *_strdup(const char *str);
 void handles_exit(char *const args[]);
 int cmd_exists(const char *cmd, const char *dir);
+void print_concat(const char *dir, const char *cmd);
 
 #endif
