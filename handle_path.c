@@ -19,8 +19,7 @@ char *gets_path(const char *cmd, const char *track)
 	{
 		char tmpTrack[CMD_LEN];
 
-		snprintf(tmpTrack, sizeof(tmpTrack), "%s/%s", dir, cmd);
-
+		print_concat(dir, cmd);
 		if (access(tmpTrack, X_OK) == 0)
 		{
 			fTrack = _strdup(tmpTrack);
