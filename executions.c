@@ -20,7 +20,12 @@ void exec_cmd(const char *cmd, char *const args[])
 	{
 		handles_environ(args);
 	}
-
+	else if (_strcmp(cmd, "clear") == 0)
+	{
+		system("clear");
+	}
+	else
+	{
 	pid = fork();
 
 	if (pid < 0)
@@ -30,13 +35,14 @@ void exec_cmd(const char *cmd, char *const args[])
 	}
 	else if (pid == 0)
 	{
-		execvp(cmd, args);
+		execve("/bin/ls", (char * const*)args, (char * const*)NULL);
 		perror("Command execution failed");
 		exit(EXIT_FAILURE);
 	}
 	else
 	{
 		waitpid(pid, &st, 0);
+	}
 	}
 
 
