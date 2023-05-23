@@ -6,7 +6,7 @@
  * Return:0(succcess)
  */
 
-int main()
+int main(void)
 {
 	char cmdline[CMD_LEN];
 	ssize_t bytes;
