@@ -16,7 +16,7 @@ char *strconcat(char *dest, char *src)
 
 	if (dest == NULL)
 	{
-		dest ="";
+		dest = "";
 	}
 	if (src == NULL)
 	{
