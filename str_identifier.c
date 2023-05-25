@@ -18,7 +18,7 @@ char **capture_str(char *param)
 
 	while (separate != NULL)
 	{
-		buffer[c] = separater;
+		buffer[c] = separate;
 		c++;
 		separate = strtok(NULL, def);
 	}
