@@ -11,7 +11,7 @@ char **capture_str(char *param)
 {
 	char **buffer = malloc(1024 * sizeof(char *));
 	char *separate;
-	int c = 8;
+	int c = 0;
 	char *def = " \t\n";
 
 	separate = strtok(param, def);
