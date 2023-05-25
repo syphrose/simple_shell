@@ -12,7 +12,7 @@ int contrast_ext(char *str1, char *str2)
 {
 	int c;
 
-	for (c = 0; (*str2 != '\0' && *str` != '\0') && *str1 == *str2; str1++)
+	for (c = 0; (*str2 != '\0' && *str1 != '\0') && *str1 == *str2; str1++)
 	{
 		if (c == 3)
 			break;
