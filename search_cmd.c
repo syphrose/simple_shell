@@ -2,12 +2,12 @@
 /**
  * search_cmd - looks for first commands exected in path
  *
- * @cmd: command
+ * @cmmd: command
  *
  * Return: error message
  *
  */
-char *search_cmd(char *cmd)
+char *search_cmd(char *cmmd)
 {
 	DIR *fd;
 	int c;
@@ -17,7 +17,7 @@ char *search_cmd(char *cmd)
 
 	while (*environ != NULL)
 	{
-		if (!(_strcmdir(*environ, "PATH")))
+		if (!(str_cmp(*environ, "PATH")))
 		{
 			*str = *environ;
 
@@ -33,15 +33,15 @@ char *search_cmd(char *cmd)
 				while ((start = readdir(fd)))
 				{
 					cmd = start->d_name;
-					comp = _strcmpdir(cmd, cmmd);
+					comp = str_cmp(cmd, cmmd);
 
 					if (comp == 0)
 					{
-						return (*separater);
+						return (*separate);
 					}
 					if (cmd == NULL)
 					{
-						perrror("Error");
+						perror("Error");
 					}
 				}
 			}
