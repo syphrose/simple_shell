@@ -9,8 +9,7 @@ void gets_prompt(void)
 {
 	for (;;)
 	{
-		char *txt = NULL;
-		char **environ;
+		char *txt = NULL, **environ;
 		pid_t child_pid;
 		int st, len_buffer;
 		size_t buffer_size = 0;
@@ -25,17 +24,17 @@ void gets_prompt(void)
 		{
 			while (*environ != NULL)
 			{
-				if (!(_strcmpdir(*environ, "USER")) ||
-						!(_strcmpdir(*environ, "LANG")) ||
-						!(_strcmpdir(*environ, "SESSION")) ||
-						!(_strcmpdir(*environ, "COMPIZ_CONFIG_PROFILE")) ||
-						!(_strcmpdir(*environ, "SHLV")) ||
-						!(_strcmpdir(*environ, "HOME")) ||
-						!(_strcmpdir(*environ, "C_IS")) ||
-						!(_strcmpdir(*environ, "DESKTOP_SESSION")) ||
-						!(_strcmpdir(*environ, "LOGNAME")) ||
-						!(_strcmpdir(*environ, "TERM")) ||
-						!(_strcmpdir(*environ, "PATH")))
+				if (!(str_cmp(*environ, "USER")) ||
+						!(str_cmp(*environ, "LANG")) ||
+						!(str_cmp(*environ, "SESSION")) ||
+						!(str_cmp(*environ, "COMPIZ_CONFIG_PROFILE")) ||
+						!(str_cmp(*environ, "SHLV")) ||
+						!(str_cmp(*environ, "HOME")) ||
+						!(str_cmp(*environ, "C_IS")) ||
+						!(str_cmp(*environ, "DESKTOP_SESSION")) ||
+						!(str_cmp(*environ, "LOGNAME")) ||
+						!(str_cmp(*environ, "TERM")) ||
+						!(str_cmp(*environ, "PATH")))
 				{
 					add(*environ), add("\n"); }
 				environ++; }}

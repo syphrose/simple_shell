@@ -29,8 +29,8 @@ void exec_cmd(char **cmd)
 	else
 	{
 		x = search_cmd(vart);
-		sl = str_concat(x, sl);
-		s = str_concat(sl, *cmd);
+		sl = strconcat(x, sl);
+		s = strconcat(sl, *cmd);
 		argv[0] = s;
 		argv[1] = param;
 		argv[2] = ".";

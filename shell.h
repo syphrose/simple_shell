@@ -16,7 +16,7 @@ extern char **environ;
 void gets_prompt(void);
 void exec_cmd(char **cmd);
 int str_cmp(char *str1, char *str2);
-size_t str_len(const char *string);
+int str_len(const char *string);
 char *strconcat(char *dest, char *src);
 void add(char *string);
 int putchar_(char c);

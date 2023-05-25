@@ -5,24 +5,39 @@
  * @dest:destination
  * @src:source
  *
- * Return:result
+ * Return:dest
  */
 
 char *strconcat(char *dest, char *src)
 {
-	int n, i = 0;
-	char *rslt = dest;
+	char *rslt;
+	int len1, len2;
+	int m, i, k;
 
-	while (*dest != '\0')
+	if (dest == NULL)
 	{
-		dest++;
+		dest ="";
 	}
-	while (*src != '\0' && i < n)
+	if (src == NULL)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		i++;
+		src = "";
 	}
-	*dest = '\0';
+	len1 = str_len(dest);
+	len2 = str_len(src);
+
+	rslt = malloc(((len1) + (len2) + 1) * sizeof(char));
+	if (rslt == NULL)
+	{
+		return (NULL);
+	}
+	for (m = 0; m < len1; m++)
+	{
+		rslt[m] = dest[m];
+	}
+	for (i = len1, k = 0; k <= len2; i++, k++)
+	{
+		rslt[i] = src[k];
+	}
 	return (rslt);
+}
+
