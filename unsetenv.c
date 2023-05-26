@@ -23,7 +23,7 @@ int unset_env(data_t *data, char *vr)
 			data->new_env = rm_nd_ind(&(data->env), i);
 			i = 0;
 			nd = data->env;
-			continue
+			continue;
 		}
 		nd = nd->nxt;
 		i++;
