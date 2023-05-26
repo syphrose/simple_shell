@@ -24,7 +24,7 @@ void set_data(data_t *data, char **av)
 		}
 		for (i = 0; data->av && data->av[i]; i++)
 			data->ac = i;
-		return (_alias(data));
-		return (_vars(data));
+		return_alias(data);
+		return_vars(data);
 	}
 }
