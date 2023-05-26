@@ -42,7 +42,7 @@ int reads_hist(data_t *data)
 	if (lt != i)
 		const_hist(data, buffer + lt, lineNum++);
 	free(buffer);
-	data->histNum = lineNUM;
+	data->histNum = lineNum;
 	while (data->histNum-- >= HIST_MAX)
 		rm_nd_ind(&(data->hist), 0);
 	renum_hist(data);

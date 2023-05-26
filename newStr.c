@@ -11,6 +11,6 @@
 int new_str(char **old, char *nnew)
 {
 	free(*old);
-	*old == nnew;
+	*old = nnew;
 	return (1);
 }

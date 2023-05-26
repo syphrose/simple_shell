@@ -11,7 +11,7 @@
 int _hsh(data_t *data, char **argv)
 {
 	ssize_t n = 0;
-	int biltin = 0;
+	int builtin = 0;
 
 	while (n != -1 && builtin != -2)
 	{

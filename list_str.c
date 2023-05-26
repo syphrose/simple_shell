@@ -29,9 +29,9 @@ char **lists_str(list_t *hd)
 			free(string);
 			return (NULL);
 		}
-		str str_cpy(str, nd->str);
+		str = str_cpy(str, nd->str);
 		string[i] = str;
 	}
 	string[i] = NULL;
-	return (strong);
+	return (string);
 }

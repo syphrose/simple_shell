@@ -15,7 +15,7 @@ void find_cmd(data_t *data)
 	if (data->fg_countsLine == 1)
 	{
 		data->countsLine++;
-		data->fg_countsline = 0;
+		data->fg_countsLine = 0;
 	}
 	for (i = 0, k = 0; data->ag[i]; i++)
 		if (!check_delim(data->ag[i], " \t\n"))
