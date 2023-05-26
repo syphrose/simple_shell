@@ -20,6 +20,7 @@ char *converts_num(long int num, int bs, int fg)
 		n = -num;
 		sig = '-';
 	}
+	x = fg & CONVERTS_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 
 	p = &buffer[49];
 	*p = '\0';
