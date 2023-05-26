@@ -16,7 +16,7 @@ int exit_(data_t *data)
 		if (confirm < 0)
 		{
 			data->st = 2;
-			prints_err(data, "Illegal num" : );
+			prints_err(data, "Illegal num: ");
 			eputs_(data->av[1]);
 			eput_char('\n');
 			return (1);
