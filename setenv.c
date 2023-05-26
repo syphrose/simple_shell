@@ -33,7 +33,7 @@ int set_env(data_t *data, char *vr, char *value)
 			data->new_env = 1;
 			return (0);
 		}
-		nd = nd->nxt
+		nd = nd->nxt;
 	}
 	add_nd(&(data->env), buffer, 0);
 	free(buffer);
