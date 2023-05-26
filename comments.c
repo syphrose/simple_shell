@@ -8,7 +8,7 @@ void deletes_comment(char *buffer)
 {
 	int i;
 
-	for (i = 0; bufffer[i] != '\0'; i++)
+	for (i = 0; buffer[i] != '\0'; i++)
 		if (buffer[i] == '#' && (!i || buffer[i - 1] == ' '))
 		{
 			buffer[i] = '\0';
