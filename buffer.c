@@ -7,7 +7,7 @@
  * Return: n
  *
  */
-ssize_t gets_buffer(data_t *data, char *buffer, size *i)
+ssize_t gets_buffer(data_t *data, char *buffer, size_t *i)
 {
 	ssize_t n = 0;
 
