@@ -26,6 +26,6 @@ void release_data(data_t *data, int a)
 		bfree((void **)data->cmd_buffer);
 		if (data->gets_fd > 2)
 			close(data->gets_fd);
-		put_char(BUFFER_FLUSH)
+		put_char(BUFFER_FLUSH);
 	}
 }
