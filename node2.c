@@ -11,19 +11,19 @@
 
 list_t *adds_nd(list_t **hd, const char *str, int num)
 {
-	list_t *new_hd, *nd;
+	list_t *new_nd, *nd;
 
 	if (!hd)
 		return (NULL);
 	nd = *hd;
 	new_nd = malloc(sizeof(list_t));
-	if (!new_hd)
+	if (!new_nd)
 		return (NULL);
 	mem_set((void *)new_nd, 0, sizeof(list_t));
 	new_nd->num = num;
 	if (str)
 	{
-		new_hd->str = str_dup(str);
+		new_nd->str = str_dup(str);
 		if (!new_nd->str)
 		{
 			free(new_nd);

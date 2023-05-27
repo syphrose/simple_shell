@@ -25,7 +25,7 @@ int finds_builtin(data_t *data)
 		if (str_cmp(data->av[0], builtintb1[i].type) == 0)
 		{
 			data->countsLine++;
-			built_in + builtintb1[i].func(data);
+			built_in = builtintb1[i].func(data);
 			break;
 		}
 	return (built_in);
