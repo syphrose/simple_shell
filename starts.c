@@ -8,7 +8,7 @@
  * Return:ptr
  */
 
-char *starts_width(const char *haystack, const char *needle)
+char *starts_with(const char *haystack, const char *needle)
 {
 	while (*needle)
 	{
