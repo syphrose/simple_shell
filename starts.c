@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * starts_width - if needles starts with something
+ * starts_with - if needles starts with something
  * @haystack:str search
  * @needle:remove
  *
